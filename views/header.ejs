@@ -1,0 +1,113 @@
+<header>
+
+    <div class="logo-cont">
+        <a href="/" class="logo">course<span class="green">on</span></a>
+    </div>
+
+    <nav>
+        <a href="/categories">Categories</a>
+        <a href="/newest">Newest</a>
+        <a href="">Contact</a>
+        <div class="burger">
+            <div class="b"></div>
+            <div class="b"></div>
+            <div class="b"></div>
+        </div>
+        <div class="user-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.9542 14.9104C22.8447 13.5105 24.0758 11.2448 24.0758 8.6923C24.0758 4.45076 20.6773 1 16.5 1C12.3227 1 8.92423 4.45076 8.92423 8.6923C8.92423 11.2448 10.1553 13.5105 12.0458 14.9104C7.34626 16.7365 4 21.3631 4 26.7692C4 29.1021 5.86916 31 8.16667 31H24.8333C27.1308 31 29 29.1021 29 26.7692C29 21.3631 25.6537 16.7365 20.9542 14.9104ZM11.197 8.6923C11.197 5.72324 13.5759 3.30771 16.5 3.30771C19.4241 3.30771 21.803 5.72324 21.803 8.6923C21.803 11.6614 19.4241 14.077 16.5 14.077C13.5759 14.077 11.197 11.6614 11.197 8.6923ZM24.8333 28.6923H8.16667C7.12236 28.6923 6.27275 27.8296 6.27275 26.7692C6.27275 21.043 10.8606 16.3846 16.5001 16.3846C22.1395 16.3846 26.7274 21.043 26.7274 26.7692C26.7273 27.8296 25.8777 28.6923 24.8333 28.6923Z" fill="#EFF2F7"/>
+            </svg>
+            
+            <div class="redirects-cont hidden">
+                <div class="redirects-inner">
+
+                    <% if(user == null) { %>
+                        <a href="/login" class="loginA a1">Login</a>
+                        <a href="/register" class="registerA a1">Register</a>
+                    <% }else{ %>
+                        <div class="credentials-cont">
+                            <div class="user-img-cont">
+                                <div class="user-img">
+                                    <img src="/userImgs/<%= user.img %>" alt="img">
+                                </div>
+                            </div>
+                            <div class="user-fullname" title="<%= user.firstname + ' ' + user.lastname %>"><%= user.firstname + ' ' + user.lastname %></div>
+                            <div class="user-email"><%= user.email %></div>
+                        </div>
+
+                        <h5>My courses</h5>
+                        <div class="my-courses">
+                            <% user.courses.forEach(course =>{ %>
+                                <div class="my-course">
+                                    <a href="/course?id=<%= course._id %>&meeting=0" class="m-course-img">
+                                        <img src="/courseImgs/<%= course.img %>" alt="">
+                                    </a>
+                                    <a href="/course?id=<%= course._id %>&meeting=0" class="m-course-title"><%= course.title %></a>
+                                </div>
+                            <% }) %>
+                        </div>
+
+                        <a href="/creator" class="create-course-btn btn">Create course</a>
+                        <a href="/logout" class="logout btn">Logout</a>
+                    <% } %>
+                    
+                </div>
+            </div>
+        </div>
+    </nav>
+
+</header>
+
+
+
+<div class="burger-bg off"></div>
+<div class="burger-content off">
+    
+    <div class="burger-user-icon display-none">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.9542 14.9104C22.8447 13.5105 24.0758 11.2448 24.0758 8.6923C24.0758 4.45076 20.6773 1 16.5 1C12.3227 1 8.92423 4.45076 8.92423 8.6923C8.92423 11.2448 10.1553 13.5105 12.0458 14.9104C7.34626 16.7365 4 21.3631 4 26.7692C4 29.1021 5.86916 31 8.16667 31H24.8333C27.1308 31 29 29.1021 29 26.7692C29 21.3631 25.6537 16.7365 20.9542 14.9104ZM11.197 8.6923C11.197 5.72324 13.5759 3.30771 16.5 3.30771C19.4241 3.30771 21.803 5.72324 21.803 8.6923C21.803 11.6614 19.4241 14.077 16.5 14.077C13.5759 14.077 11.197 11.6614 11.197 8.6923ZM24.8333 28.6923H8.16667C7.12236 28.6923 6.27275 27.8296 6.27275 26.7692C6.27275 21.043 10.8606 16.3846 16.5001 16.3846C22.1395 16.3846 26.7274 21.043 26.7274 26.7692C26.7273 27.8296 25.8777 28.6923 24.8333 28.6923Z" fill="#EFF2F7"/>
+        </svg>
+        
+        <div class="burger-redirects-cont hidden">
+            <div class="redirects-inner">
+
+                <% if(user == null) { %>
+                    <a href="/login" class="loginA a1">Login</a>
+                    <a href="/register" class="registerA a1">Register</a>
+                <% }else{ %>
+                    <div class="credentials-cont">
+                        <div class="user-img-cont">
+                            <div class="user-img">
+                                <img src="/userImgs/<%= user.img %>" alt="img">
+                            </div>
+                        </div>
+                        <div class="user-fullname" title="<%= user.firstname + ' ' + user.lastname %>"><%= user.firstname + ' ' + user.lastname %></div>
+                        <div class="user-email"><%= user.email %></div>
+                    </div>
+
+                    <h5>My courses</h5>
+                    <div class="my-courses">
+                        <% user.courses.forEach(course =>{ %>
+                            <div class="my-course">
+                                <a href="/course?id=<%= course._id %>&meeting=0" class="m-course-img">
+                                    <img src="/courseImgs/<%= course.img %>" alt="">
+                                </a>
+                                <a href="/course?id=<%= course._id %>&meeting=0" class="m-course-title"><%= course.title %></a>
+                            </div>
+                        <% }) %>
+                    </div>
+
+                    <a href="/creator" class="create-course-btn btn">Create course</a>
+                    <a href="/logout" class="logout btn">Logout</a>
+                <% } %>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="burger-nav">
+        <a href="/categories">Categories</a>
+        <a href="/newest">Newest</a>
+        <a href="">Contact</a>
+    </div>
+</div>

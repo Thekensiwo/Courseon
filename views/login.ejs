@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="/scripts/navScript.js" defer></script>
+</head>
+<body>
+
+    <%- include('header') %>
+
+    <h1>Login</h1>
+
+
+    <form action="/login" method="POST">
+
+        <label class="inp-cont">
+            <div class="text">Email</div>
+            <input type="text" class="email" name="email" required>
+        </label>
+
+        <label class="inp-cont">
+            <div class="text">Password</div>
+            <input type="password" class="password" name="password" required>
+        </label>
+
+        <button>Submit</button>
+
+        <a href="/register" class="instead">First time with us? <span class="green"> Register instead</span></a>
+
+    </form>
+
+    <svg class="blob-l" width="445" height="237" viewBox="0 0 445 237" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M-26.0857 0.200353C83.7162 -3.74851 190.815 50.9382 253.812 140.957C312.792 225.236 464.804 345.58 442.5 446C419.969 547.442 226.289 648.81 131.537 691.475C38.3645 733.428 -62.203 674.51 -152.56 626.794C-237.043 582.18 -323.282 529.895 -348.791 437.824C-375.53 341.312 -341.264 240.823 -281.828 160.221C-219.037 75.07 -131.816 4.00278 -26.0857 0.200353Z" fill="#008C8C"/>
+    </svg>
+    
+    <svg class="blob-r" width="530" height="339" viewBox="0 0 530 339" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M319 61.9999C448.5 -14.5 540.662 -24.3203 598.314 56.7469C652.321 132.69 752.317 384.714 732.696 475.813C712.687 568.721 677.709 667.152 591.477 707.106C506.266 746.586 411.692 704.744 327.235 663.677C243.336 622.881 30.2524 547.003 4.8138 457.247C-21.9488 362.82 67.5923 236.14 156.814 195.247C216.814 167.747 256.377 98.9934 319 61.9999Z" fill="#008C8C"/>
+    </svg>   
+
+</body>
+</html>

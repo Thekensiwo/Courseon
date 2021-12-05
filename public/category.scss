@@ -1,0 +1,151 @@
+@import 'navFooter';
+@import 'vars';
+
+main{
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    p{
+        width: 100%;
+        text-align: center;
+        color: rgb(145, 145, 145);
+        font-size: 3rem;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+
+    .courses-cont{
+        width: 100%;
+        min-height: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 360px);
+        grid-auto-rows: 320px;
+        margin-top: 2rem;
+
+
+        .course-cont{
+            width: 320px;
+            height: 360px;
+            display: flex;
+            flex-direction: column;
+            margin-top: 4rem;
+            margin-left: auto;
+            margin-right: auto;
+
+            .img-cont{
+                flex: 1.5;
+                background: #76F5C7;
+                border-radius: 6px 6px 0px 0px;
+                position: relative;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    object-fit: cover;
+                    border-radius: 6px 6px 0px 0px;
+                }
+            }
+
+            .info{
+                flex: 1;
+                
+                .title{
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin-top: 1rem;
+                    display: block;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                .price-ranking{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: .5rem;
+
+                    .price{
+                        font-size: 2rem;
+                        color: $gr;
+                    }
+
+                    .rating{
+                        font-size: 1.8rem;
+                        color: #585858;
+                    }
+                }
+
+                .author-cont{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 1rem;
+
+                    .author{
+                        font-size: 1.6rem;
+                        color: #585858;
+                        font-weight: 500;
+                    }
+
+                    .author-img{
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 50%;
+                        background: $gr;
+                        position: relative;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            object-fit: cover;
+                            border-radius: 6px 6px 0px 0px;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 1300px){
+    main{
+        .courses-cont{
+            width: 70%;
+            justify-content: center;
+            grid-gap: 3rem;
+        }
+        h1{
+            font-size: 6rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+footer{
+    background: #fff !important;
+}

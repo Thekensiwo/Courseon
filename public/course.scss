@@ -1,0 +1,685 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+    --wd: 98%;
+}
+
+$gr: #008C8C;
+$gray: #535353;
+$d1: #1D2022;
+$d2: #191B1D;
+$grd: #008181;
+$wd: 98%;
+$mrg: .7rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Nunito";
+    overflow-x: hidden;
+    background: #18191A;
+}
+
+.green{
+    color: #008C8C;
+}
+
+.no-perm{
+    width: 100%;
+    font-size: 4rem;
+    color: white;
+    opacity: .35;
+    text-align: center;
+    padding-top: 15rem;
+}
+
+
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .logo{
+        font-size: 3rem;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .settings-cont{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $d1;
+        position: absolute;
+        right: 1.5%;
+        cursor: pointer;
+        
+        .settings-inner{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: grid;
+            place-items: center;
+
+            .settings-content{
+                width: 290px;
+                height: 170px;
+                position: absolute;
+                right: 110%;
+                top: 0%;
+                background: #1D2022;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                border-radius: 6px;
+                box-shadow: 0px 2px 10px rgba(255,255,255,0.05);
+                z-index: 300000;
+
+                button{
+                    width: 90%;
+                    height: 42px;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    outline: none;
+                    border-radius: 4px;
+                    background: #262D31;
+                    color: #fff;
+                    font-family: "Nunito";
+                    cursor: pointer;
+
+                    &:hover{
+                        background: #22292c;
+                    }
+
+                    span{
+                        flex: 1;
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        display: block;
+                        text-align: left;
+                        padding-left: 1rem;
+                    }
+
+                    svg{
+                        margin-right: 2rem;
+                        width: 30px;
+                        height: 30px;
+                    }
+                }
+
+                .add-mat-file{
+                    margin-top: 1rem;
+                    color: white;
+                    background: #22292c;
+                    border-radius: 4px;
+                    padding: .5rem 0rem;
+                }
+
+                .add-file-btn{
+                    font-size: 1.7rem;
+                    font-weight: 600;
+                    display: block;
+                }
+
+                .go-back{
+                    color: white;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .two{
+        right: 10%;
+    }
+
+    .user-icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: $d1;
+        display: grid;
+        place-items: center;
+        position: absolute;
+        right: 1.5%;
+
+        svg{
+            width: 29px;
+            height: 29px;
+        }
+    }
+}
+
+
+
+
+
+main{
+    display: grid;
+    grid-template-rows: 1fr .07fr 1.4fr .05fr .2fr;
+    grid-template-areas: "vid"
+                          "."
+                          "chat"
+                          "."
+                          "users";
+    width: var(--wd);
+    margin-left: auto;
+    margin-right: auto;
+    height: 850px;
+    position: relative;
+
+    .video-container{
+        grid-area: vid;
+        background: $d1;
+        border-radius: 4px;
+        position: relative;
+
+        video{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 300;
+        }
+    }
+
+    .chat-container{
+        grid-area: chat;
+        background: $d1;
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 8fr 1.1fr;
+        grid-template-areas: "upper"
+                             "main"
+                             "bottom";
+
+        .chat-upper{
+            grid-area: upper;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background: $d1;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.25);
+            border-radius: 4px 4px 0px 0px;
+
+            svg{
+                
+            }
+
+            .members-svg{
+                margin-right: auto;
+                margin-left: 1.5rem;
+            }
+
+            .filters-svg{
+                margin-left: auto;
+                margin-right: 1.5rem;
+            }
+
+            h3{
+                font-size: 2rem;
+                color: #E4E6EB;
+            }
+        }
+
+        .chat-main{
+            grid-area: main;
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+            padding: 0rem 1rem;
+            position: absolute;
+            width: 100%;
+
+            &::-webkit-scrollbar {
+                width: 10px;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #191B1D;
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #333C42;
+                border-radius: 6px;
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: rgb(80, 80, 80)C42;
+            }
+
+            .message{
+                width: 68ch;
+                word-break: break-word;
+                color: white;
+                height: max-content;
+                display: flex;
+                font-size: 1.2rem;
+                padding: .5rem 0rem;
+                padding-right: .5rem;
+
+                .nick{
+                    width: max-content;
+                    word-break: keep-all;
+                    white-space: nowrap;
+                }
+
+                .msg{
+                    margin-left: .5rem;
+                }
+            }
+        }
+
+        .chat-bottom{
+            grid-area: bottom;
+            box-shadow: 0px -3px 4px rgba(0,0,0,0.25);
+            border-radius: 0px 0px 4px 4px;
+            display: grid;
+            place-items: center;
+
+            .inp-cont{
+                position: relative;
+                width: 95%;
+                height: 80%;
+
+                .inp{
+                    width: 100%;    
+                    height: 100%;
+                    background: $d2;
+                    border: none;
+                    outline: none;
+                    border-radius: 4px;
+                    color: #d1d2d3;
+                    padding-left: .8rem;
+                    font-size: 1.7rem;
+                }
+
+                svg{
+                    position: absolute;
+                    right: 5%;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    &:hover path{
+                        fill: #b1b1b1;
+                    }
+                }
+            }
+        }
+    }
+
+    .chat-users{
+        grid-area: users;
+        background: black;
+        display: flex;
+        align-items: center;
+        background: $d1;
+        border-radius: 3px;
+
+        .chat-user{
+            margin-left: 1rem;
+            width: 38px;
+            height: 38px;
+            background: #333C42;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+
+            svg{
+                width: 22px;
+                height: 22px;
+
+                path{
+                    fill: #BCBCBC;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    
+    .meetings-list{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        background: $d1;
+        border-radius: 6px;
+        margin-left: auto;
+        margin-right: auto;
+        grid-area: list;
+
+        .meeting{
+            border-bottom: 1px solid #151718;
+            padding-bottom: 1rem;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+
+            .meeting-upper{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: .7rem 0rem;
+                
+                h3{
+                    color: #E7E7E7;
+                    font-weight: 600;
+                    font-size: 2rem;
+                    padding-left: 1.5rem;
+                }
+
+                .date-cont{
+                    background: $d2;
+                    border-radius: 3px;
+                    padding: .7rem;
+                    display: flex;
+                    width: 130px;
+                    justify-content: space-around;
+                    align-items: center;
+                    margin-right: 1.5rem;
+                    
+                    svg{
+
+                    }
+
+                    .meeting-date{
+                        color: #E7E7E7;
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+
+            .meeting-bottom{
+                display: flex;
+                justify-content: space-between;
+
+                h5{
+                    margin-right: 1.5rem;
+                    font-size: 1.2rem;
+                    color: #fff;
+                }
+            }
+
+            .meeting-title{
+                color: #9E9E9E;
+                padding-left: 1.5rem;
+                font-size: 1.6rem;
+            }
+
+            &:hover{
+                background: #212527;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    /* --- Info cont --- */
+    .info-cont{
+        background: $d1;
+        width: var(--wd);
+        min-height: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+        padding-bottom: 4rem;
+        border-radius: 4px;
+        color: #E7E7E7;
+        grid-area: info;
+
+
+
+        h3{
+            color: #E7E7E7;
+            text-align: center;
+            font-weight: 600;
+            font-size: 2.8rem;
+            padding: 2rem 0rem;
+        }
+
+        .meeting-info{
+            color: #E7E7E7;
+            text-align: center;
+            word-break: break-word;
+            padding: 0rem 5rem;
+            font-size: 1.4rem;
+        }
+
+        .course-info{
+            color: #E7E7E7;
+            text-align: center;
+            word-break: break-word;
+            padding: 0rem 5rem;
+            font-size: 1.4rem;
+        }
+
+
+        span{
+            font-size: 1.7rem;
+            margin-left: 2rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .est-meeting-cont{
+            margin-top: 2rem;
+            width: max-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .est-meeting{
+            background: $d2;
+            width: max-content;
+            padding: .4rem 1rem;
+            border-radius: 4px;
+            margin-left: 1.5rem;
+        }
+
+        h4{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 5rem;
+            font-weight: 600;
+        }
+
+        .meeting-materials{
+            width: 90%;
+            min-height: 100px;
+            background: $d2;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: .5rem;
+        }
+
+        
+        /* --- Course info --- */
+        .about-course{
+            margin-top: 1rem;
+        }
+
+        .course-start,.course-end{
+
+            .course-info-txt{
+                width: 40%;
+            }
+        }
+        
+        .course-start{
+            margin-top: 6rem;    
+        }
+        
+        .start,.end{
+            background: $d2;
+            display: flex;
+            align-items: center;
+            padding: .4rem 1rem;
+            font-size: 1.4rem;
+            margin-left: 1.5rem;
+            border-radius: 4px;
+
+            svg{
+                width: 22px;
+                height: 22px;
+            }
+
+            .txt{
+                padding-left: 1rem;
+            }
+        }
+
+        .est-meetings-total{
+            background: $d2;
+            padding: .4rem 1rem;
+            font-size: 1.8rem;
+            margin-left: 1.5rem;
+            margin-bottom: -1.5rem;
+            border-radius: 4px;
+        }
+
+        .course-materials{
+            width: 90%;
+            min-height: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: .5rem;
+
+            .material{
+                display: block;
+                height: max-content;
+                text-decoration: none;
+                padding: 1rem 1.5rem;
+                background: rgba(25, 27, 29,1);
+                border-radius: 4px;
+                margin-top: .5rem;
+                color: rgb(255, 255, 255);
+                font-size: 1.3rem;
+                cursor: pointer;
+            }
+
+            .material:not(:first-child){
+                margin-left: 1rem;
+            }
+        }
+
+
+        /* --- About mentor --- */
+        .about-mentor{
+            margin-top: 4rem;
+        }
+
+        .mentor-personals{
+            
+            .mentor-img-cont{
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background: $d2;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 0;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+
+            .mentor-name{
+                text-align: center;
+                font-size: 2.2rem;
+                margin-top: 1.5rem;
+            }
+        }
+
+        .mentor-desc{
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1.5rem 3rem;
+        }
+
+        .mentor-info{
+            margin-left: auto;
+            margin-right: auto;
+            width: max-content;
+            
+             & > *{
+                display: flex;
+                align-items: center;
+                margin-top: 2rem;
+                
+                svg{
+                    width: 32px;
+                    height: 32px;
+                }
+
+                .info-txt{
+                    margin-left: 1rem;
+                    font-size: 1.5rem;
+                }
+             }
+        }
+    }
+}
+
+.off{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.display-hidden{
+    display: none !important;
+}
+
+.add-mat-success{
+    background: rgb(53, 221, 11);
+}
+
+.btn-on{
+    background: rgb(32, 39, 41) !important;
+}

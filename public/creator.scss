@@ -1,0 +1,440 @@
+@import 'navFooter';
+@import 'vars';
+
+
+.hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+form{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    h3{
+        font-size: 3rem;
+        font-weight: 700;
+    }
+
+    .inp-cont{
+        width: 90%;
+        height: 60px;
+        margin-top: 2rem;
+        height: auto;
+
+        label{
+            display: block;
+            font-size: 1.5rem;
+            padding-bottom: .5rem;
+            font-weight: 600;
+        }
+
+        input[type=text],input[type=number]{
+            width: 100%;
+            height: 32px;
+            border: 1px solid rgba(0,0,0,0.28);
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+            border-radius: 4px;
+            outline: none;
+            padding-left: .5rem;
+        }
+
+        textarea{
+            width: 100%;
+            height: 50px;
+            display: block;
+            border: 2px solid rgba(0,0,0,0.2);
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+    }
+
+    .selectt{
+        position: relative;
+        
+        input{
+            cursor: pointer;
+        }
+
+        .custom-select{
+
+            width: 100%;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            border-top: 1px solid rgba(0,0,0,0.28);
+            background: #fff;
+            box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+            z-index: 500;
+            border-radius: 0px 0px 10px 10px;
+
+            .cat{
+                padding: .7rem 1rem;
+                font-size: 1.5rem;
+                cursor: pointer;
+                
+                &:hover{
+                    background: rgb(240, 240, 240);
+                }
+            }
+
+            .cat:last-child:hover{
+                border-radius: 0px 0px 10px 10px;
+            }
+        }
+    }
+
+    .add-meeting{
+        width: 100%;
+        height: 37px;
+        border-radius: 3px;
+        font-size: 1.7rem;
+        font-weight: 700;
+        border: 2px solid $gr;
+        color: $gr;
+        background: #fff;
+        outline: none;
+        font-family: "Nunito";
+        margin-top: 3rem;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow: 0px 2px 10px rgba(0, 140, 140, .7);
+        }
+    }
+
+    .submit{
+        grid-area: submit;
+        width: 100%;
+        height: 37px;
+        background: $gr;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 1.7rem;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        font-family: "Nunito";
+        margin-top: 3rem;
+        transition: 0.3s ease;
+        cursor: pointer;
+        
+        &:hover{
+            background: $grd;
+        }
+    }
+
+    .meetings-cont{
+        width: 100%;
+        height: auto;
+        display: none;
+        border: 2px solid rgba(0,0,0,0.2);
+        box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        margin-top: 2rem;
+        border-radius: 4px;
+
+        .meeting{
+            width: 100%;
+            padding-bottom: 1rem;
+
+            .meeting-upper{
+                display: flex;
+                justify-content: space-between;
+                padding: .7rem 0rem;
+
+                h5{
+                    margin-left: .5rem;
+                    font-size: 1.2rem;
+                }
+                
+                .cm-date{
+                    margin-right: .5rem;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+
+            .meeting-bottom{
+                display: flex;
+                justify-content: space-between;
+
+                h5{
+                    margin-right: .5rem;
+                    font-size: 1.2rem;
+                }
+            }
+
+            h6{
+                font-size: 1rem;
+                margin-left: .5rem;
+            }
+        }
+
+        .meeting:not(:first-child){
+            border-top: 2px solid rgba(0,0,0,0.2);
+        }
+    }
+
+    .l{
+        grid-area: l;
+        flex: 1.5;
+    }
+
+    .r{
+        grid-area: r;
+        flex: 1;
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 800px){
+    form{
+        width: 95%;
+        padding-bottom: 5rem;
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: "1.4fr 1fr";
+        grid-template-rows: "2fr 0.1fr";
+        grid-template-areas: "l r"
+                             "submit submit";
+    
+        h3{
+            font-size: 3rem;
+            font-weight: 700;
+        }
+    
+        .inp-cont{
+            width: 70%;
+            height: 60px;
+            margin-top: 2rem;
+
+            input[type=text],input[type=number]{
+                height: 35px;
+            }
+
+            textarea{
+                resize: vertical;
+                height: 100px;
+            }
+        }
+
+        .price-cont,.mdate-cont{
+            margin-top: 8rem;
+        }
+    
+        .add-meeting{
+            width: 200px;
+            height: 37px;
+            border-radius: 3px;
+            font-size: 1.7rem;
+            font-weight: 700;
+            margin-top: 3rem;
+        }
+    
+        .submit{
+            width: 250px;
+            height: 40px;
+            border-radius: 3px;
+            font-size: 1.7rem;
+            justify-self: center;
+            margin-top: 5rem;
+        }
+    
+        .meetings-cont{
+            width: 80%;
+    
+            .meeting{
+                padding-bottom: 1rem;
+    
+                .meeting-upper{
+                    padding: .7rem 0rem;
+    
+                    h5{
+                        margin-left: .5rem;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .cm-date{
+                        margin-right: .5rem;
+                        font-size: 1rem;
+                    }
+                }
+    
+                h6{
+                    font-size: 1rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    
+        .l{
+            margin-left: 5rem;
+        }
+    
+        .r{
+            margin-top: 0rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 1200px){
+    form{
+    
+        .inp-cont{
+            width: 50%;
+            height: 60px;
+        }
+
+        .price-cont,.mdate-cont{
+            margin-top: 8rem;
+        }
+    
+        .submit{
+            width: 290px;
+            height: 42px;
+            font-size: 2rem;
+        }
+    
+        .meetings-cont{
+            width: 60%;
+    
+            .meeting{
+                padding-bottom: 1rem;
+    
+                .meeting-upper{
+                    padding: .7rem 0rem;
+    
+                    h5{
+                        margin-left: .5rem;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .cm-date{
+                        margin-right: .5rem;
+                        font-size: 1rem;
+                    }
+                }
+    
+                h6{
+                    font-size: 1rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    
+        .l{
+        }
+    
+        .r{
+            margin-right: -15rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 1600px){
+    form{
+        width: 80%;
+        margin-top: 5rem;
+        
+        .inp-cont{
+
+            input[type=text],input[type=number]{
+                height: 37px;
+            }
+        }
+    
+        .submit{
+            width: 380px;
+            height: 52px;
+            font-size: 2.7rem;
+            margin-top: 8rem;
+        }
+    
+        .meetings-cont{
+            width: 60%;
+    
+            .meeting{
+                padding-bottom: 1rem;
+    
+                .meeting-upper{
+                    padding: .7rem 0rem;
+    
+                    h5{
+                        margin-left: .5rem;
+                        font-size: 1.2rem;
+                    }
+                    
+                    .cm-date{
+                        margin-right: .5rem;
+                        font-size: 1rem;
+                    }
+                }
+    
+                h6{
+                    font-size: 1rem;
+                    margin-left: .5rem;
+                }
+            }
+        }
+    
+        .l{
+            margin-left: 0rem;
+        }
+    
+        .r{
+            margin-right: -15rem;
+        }
+    }
+}
+
+
+.not-valid-inp{
+    border: 1px solid red !important;
+}

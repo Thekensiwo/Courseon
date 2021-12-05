@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    font-size: 10px;
+}
+
+$gr: #008C8C;
+$gray: #535353;
+$grd: #008181;
+$mrg: .7rem;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Nunito";
+    overflow-x: hidden;
+    background: #EFF2F7;
+}
+
+.green{
+    color: #008C8C;
+}

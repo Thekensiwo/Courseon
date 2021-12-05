@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="creator.css">
+    <link rel="stylesheet" href="navFooter.css">
+    <script src="/scripts/navScript.js" defer></script>
+    <script src="/scripts/creatorScript.js" defer></script>
+</head>
+<body>
+
+    <%- include('header') %>
+
+
+
+
+    <form action="/addcourse" method="POST" enctype="multipart/form-data">
+
+        <!-- Left -->
+        <div class="l">
+            <h3>Course info</h3>
+
+
+            <div class="inp-cont">
+                <label for="cname">Course name</label>
+                <input type="text" id="cname" class="" name="cname" required>
+            </div>
+
+            <div class="inp-cont selectt">
+                <label for="category">Category</label>
+                <input type="text" id="category" class="select-input" name="category" autocomplete="off" readonly required>
+
+                <div class="custom-select hidden">
+
+                    <% categories.forEach(cat =>{ %>
+                        <div class="cat"><%= cat.title %></div>
+                    <% }) %>
+                </div>
+            </div>
+
+            <div class="inp-cont">
+                <label for="about">About course</label>
+                <textarea name="about" id="about" min="1" max="200" required></textarea>
+            </div>
+
+            <div class="inp-cont price-cont">
+                <label for="price">Price</label>
+                <input type="number" id="price" class="" name="price" required>
+            </div>
+            
+            <div class="inp-cont">
+                <label for="start">Starting date</label>
+                <input type="text" id="start" class="" name="start" placeholder="XX-XX-XX" required>
+            </div>
+
+            <div class="inp-cont">
+                <label for="end">Ending date</label>
+                <input type="text" id="end" class="" name="end" placeholder="XX-XX-XX" required>
+            </div>
+
+            <div class="inp-cont">
+                <label for="materials">Materials</label>
+                <input type="file" multiple accept="pdf,image/*,video/*,audio/*,.doc,.txt" id="materials" class="" name="materials" required>
+            </div>
+
+            <div class="display-materials">
+                
+            </div>
+
+            <div class="inp-cont">
+                <label for="courseimg">Course image</label>
+                <input type="file" accept="image/*" id="courseimg" class="courseimg" name="courseimg" required>
+            </div>
+
+        </div>
+
+
+        <!-- Right -->
+        <div class="r">
+            <h3>Meetings</h3>
+
+            <div class="inp-cont">
+                <label for="mname">Meeting name</label>
+                <input type="text" id="mname" class="" name="mname">
+            </div>
+
+            <div class="inp-cont">
+                <label for="mdesc">Meeting description (short)</label>
+                <input type="text" id="mdesc" class="" name="mdesc">
+            </div>
+
+            <div class="inp-cont">
+                <label for="mabout">About meeting</label>
+                <textarea name="mabout" id="mabout"></textarea>
+            </div>
+
+            <div class="inp-cont mdate-cont">
+                <label for="mdate">Meeting date</label>
+                <input type="text" id="mdate" class="" name="mdate" placeholder="XX-XX-XX">
+            </div>
+
+            <div class="inp-cont mhour-cont">
+                <label for="mhour">Meeting hour</label>
+                <input type="text" id="mhour" class="" name="mhour" placeholder="XX:XX">
+            </div>
+
+            <div class="inp-cont">
+                <label for="estm">Estimated meeting duration</label>
+                <input type="number" id="mestm" class="" name="mestm">
+            </div>
+
+            <button class="add-meeting">Add meeting</button>
+
+            <div class="meetings-cont">
+
+            </div>
+
+        </div>
+
+
+        <input class="submit" type="submit" value="Add course">
+    </form>
+    
+</body>
+</html>

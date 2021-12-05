@@ -1,0 +1,750 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  --wd: 98%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Nunito";
+  overflow-x: hidden;
+  background: #18191A;
+}
+
+.green {
+  color: #008C8C;
+}
+
+.no-perm {
+  width: 100%;
+  font-size: 4rem;
+  color: white;
+  opacity: .35;
+  text-align: center;
+  padding-top: 15rem;
+}
+
+header {
+  width: 100%;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+header .logo {
+  font-size: 3rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+header .settings-cont {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1D2022;
+  position: absolute;
+  right: 1.5%;
+  cursor: pointer;
+}
+
+header .settings-cont .settings-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+header .settings-cont .settings-inner .settings-content {
+  width: 290px;
+  height: 170px;
+  position: absolute;
+  right: 110%;
+  top: 0%;
+  background: #1D2022;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  -webkit-box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.05);
+          box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.05);
+  z-index: 300000;
+}
+
+header .settings-cont .settings-inner .settings-content button {
+  width: 90%;
+  height: 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background: #262D31;
+  color: #fff;
+  font-family: "Nunito";
+  cursor: pointer;
+}
+
+header .settings-cont .settings-inner .settings-content button:hover {
+  background: #22292c;
+}
+
+header .settings-cont .settings-inner .settings-content button span {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: block;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+header .settings-cont .settings-inner .settings-content button svg {
+  margin-right: 2rem;
+  width: 30px;
+  height: 30px;
+}
+
+header .settings-cont .settings-inner .settings-content .add-mat-file {
+  margin-top: 1rem;
+  color: white;
+  background: #22292c;
+  border-radius: 4px;
+  padding: .5rem 0rem;
+}
+
+header .settings-cont .settings-inner .settings-content .add-file-btn {
+  font-size: 1.7rem;
+  font-weight: 600;
+  display: block;
+}
+
+header .settings-cont .settings-inner .settings-content .go-back {
+  color: white;
+  font-size: 1.5rem;
+}
+
+header .two {
+  right: 10%;
+}
+
+header .user-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #1D2022;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  right: 1.5%;
+}
+
+header .user-icon svg {
+  width: 29px;
+  height: 29px;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr .07fr 1.4fr .05fr .2fr;
+      grid-template-rows: 1fr .07fr 1.4fr .05fr .2fr;
+      grid-template-areas: "vid" "." "chat" "." "users";
+  width: var(--wd);
+  margin-left: auto;
+  margin-right: auto;
+  height: 850px;
+  position: relative;
+}
+
+main .video-container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: vid;
+  background: #1D2022;
+  border-radius: 4px;
+  position: relative;
+}
+
+main .video-container video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+}
+
+main .chat-container {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: chat;
+  background: #1D2022;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 8fr 1.1fr;
+      grid-template-rows: 1fr 8fr 1.1fr;
+      grid-template-areas: "upper" "main" "bottom";
+}
+
+main .chat-container .chat-upper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: upper;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #1D2022;
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px 4px 0px 0px;
+}
+
+main .chat-container .chat-upper .members-svg {
+  margin-right: auto;
+  margin-left: 1.5rem;
+}
+
+main .chat-container .chat-upper .filters-svg {
+  margin-left: auto;
+  margin-right: 1.5rem;
+}
+
+main .chat-container .chat-upper h3 {
+  font-size: 2rem;
+  color: #E4E6EB;
+}
+
+main .chat-container .chat-main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0rem 1rem;
+  position: absolute;
+  width: 100%;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+main .chat-container .chat-main::-webkit-scrollbar {
+  width: 10px;
+}
+
+main .chat-container .chat-main::-webkit-scrollbar-track {
+  background: #191B1D;
+}
+
+main .chat-container .chat-main::-webkit-scrollbar-thumb {
+  background: #333C42;
+  border-radius: 6px;
+}
+
+main .chat-container .chat-main::-webkit-scrollbar-thumb:hover {
+  background: #505050 C42;
+}
+
+main .chat-container .chat-main .message {
+  width: 68ch;
+  word-break: break-word;
+  color: white;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2rem;
+  padding: .5rem 0rem;
+  padding-right: .5rem;
+}
+
+main .chat-container .chat-main .message .nick {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  word-break: keep-all;
+  white-space: nowrap;
+}
+
+main .chat-container .chat-main .message .msg {
+  margin-left: .5rem;
+}
+
+main .chat-container .chat-bottom {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+  -webkit-box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px -3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 0px 0px 4px 4px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+main .chat-container .chat-bottom .inp-cont {
+  position: relative;
+  width: 95%;
+  height: 80%;
+}
+
+main .chat-container .chat-bottom .inp-cont .inp {
+  width: 100%;
+  height: 100%;
+  background: #191B1D;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  color: #d1d2d3;
+  padding-left: .8rem;
+  font-size: 1.7rem;
+}
+
+main .chat-container .chat-bottom .inp-cont svg {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  cursor: pointer;
+}
+
+main .chat-container .chat-bottom .inp-cont svg:hover path {
+  fill: #b1b1b1;
+}
+
+main .chat-users {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: users;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #1D2022;
+  border-radius: 3px;
+}
+
+main .chat-users .chat-user {
+  margin-left: 1rem;
+  width: 38px;
+  height: 38px;
+  background: #333C42;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+main .chat-users .chat-user svg {
+  width: 22px;
+  height: 22px;
+}
+
+main .chat-users .chat-user svg path {
+  fill: #BCBCBC;
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4rem;
+  /* --- Info cont --- */
+}
+
+.bottom .meetings-list {
+  width: 90%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #1D2022;
+  border-radius: 6px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-area: list;
+}
+
+.bottom .meetings-list .meeting {
+  border-bottom: 1px solid #151718;
+  padding-bottom: 1rem;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.bottom .meetings-list .meeting .meeting-upper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .7rem 0rem;
+}
+
+.bottom .meetings-list .meeting .meeting-upper h3 {
+  color: #E7E7E7;
+  font-weight: 600;
+  font-size: 2rem;
+  padding-left: 1.5rem;
+}
+
+.bottom .meetings-list .meeting .meeting-upper .date-cont {
+  background: #191B1D;
+  border-radius: 3px;
+  padding: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 130px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 1.5rem;
+}
+
+.bottom .meetings-list .meeting .meeting-upper .date-cont .meeting-date {
+  color: #E7E7E7;
+  font-size: 1.4rem;
+}
+
+.bottom .meetings-list .meeting .meeting-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottom .meetings-list .meeting .meeting-bottom h5 {
+  margin-right: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.bottom .meetings-list .meeting .meeting-title {
+  color: #9E9E9E;
+  padding-left: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.bottom .meetings-list .meeting:hover {
+  background: #212527;
+}
+
+.bottom .info-cont {
+  background: #1D2022;
+  width: var(--wd);
+  min-height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  padding-bottom: 4rem;
+  border-radius: 4px;
+  color: #E7E7E7;
+  grid-area: info;
+  /* --- Course info --- */
+  /* --- About mentor --- */
+}
+
+.bottom .info-cont h3 {
+  color: #E7E7E7;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.8rem;
+  padding: 2rem 0rem;
+}
+
+.bottom .info-cont .meeting-info {
+  color: #E7E7E7;
+  text-align: center;
+  word-break: break-word;
+  padding: 0rem 5rem;
+  font-size: 1.4rem;
+}
+
+.bottom .info-cont .course-info {
+  color: #E7E7E7;
+  text-align: center;
+  word-break: break-word;
+  padding: 0rem 5rem;
+  font-size: 1.4rem;
+}
+
+.bottom .info-cont span {
+  font-size: 1.7rem;
+  margin-left: 2rem;
+  margin-top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bottom .info-cont .est-meeting-cont {
+  margin-top: 2rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom .info-cont .est-meeting {
+  background: #191B1D;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: .4rem 1rem;
+  border-radius: 4px;
+  margin-left: 1.5rem;
+}
+
+.bottom .info-cont h4 {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 5rem;
+  font-weight: 600;
+}
+
+.bottom .info-cont .meeting-materials {
+  width: 90%;
+  min-height: 100px;
+  background: #191B1D;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+.bottom .info-cont .about-course {
+  margin-top: 1rem;
+}
+
+.bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt {
+  width: 40%;
+}
+
+.bottom .info-cont .course-start {
+  margin-top: 6rem;
+}
+
+.bottom .info-cont .start, .bottom .info-cont .end {
+  background: #191B1D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .4rem 1rem;
+  font-size: 1.4rem;
+  margin-left: 1.5rem;
+  border-radius: 4px;
+}
+
+.bottom .info-cont .start svg, .bottom .info-cont .end svg {
+  width: 22px;
+  height: 22px;
+}
+
+.bottom .info-cont .start .txt, .bottom .info-cont .end .txt {
+  padding-left: 1rem;
+}
+
+.bottom .info-cont .est-meetings-total {
+  background: #191B1D;
+  padding: .4rem 1rem;
+  font-size: 1.8rem;
+  margin-left: 1.5rem;
+  margin-bottom: -1.5rem;
+  border-radius: 4px;
+}
+
+.bottom .info-cont .course-materials {
+  width: 90%;
+  min-height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: .5rem;
+}
+
+.bottom .info-cont .course-materials .material {
+  display: block;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background: #191b1d;
+  border-radius: 4px;
+  margin-top: .5rem;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.bottom .info-cont .course-materials .material:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.bottom .info-cont .about-mentor {
+  margin-top: 4rem;
+}
+
+.bottom .info-cont .mentor-personals .mentor-img-cont {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #191B1D;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+.bottom .info-cont .mentor-personals .mentor-img-cont img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.bottom .info-cont .mentor-personals .mentor-name {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 1.5rem;
+}
+
+.bottom .info-cont .mentor-desc {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 1.5rem 3rem;
+}
+
+.bottom .info-cont .mentor-info {
+  margin-left: auto;
+  margin-right: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.bottom .info-cont .mentor-info > * {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2rem;
+}
+
+.bottom .info-cont .mentor-info > * svg {
+  width: 32px;
+  height: 32px;
+}
+
+.bottom .info-cont .mentor-info > * .info-txt {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.off {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.display-hidden {
+  display: none !important;
+}
+
+.add-mat-success {
+  background: #35dd0b;
+}
+
+.btn-on {
+  background: #202729 !important;
+}
+/*# sourceMappingURL=course.css.map */

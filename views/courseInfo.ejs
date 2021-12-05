@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="courseInfo.css">
+    <script src="/scripts/navScript.js" defer></script>
+</head>
+<body>
+
+    <%- include('header') %>
+
+
+
+    <main>
+        
+        <div class="l">
+            <h3>About this course</h3>
+            <div class="course-about">
+                <%= course.aboutCourse %>
+            </div>
+
+            <span class="course-start">
+                <div class="course-info-txt">Start of the course: </div>
+                <div class="start date-cont">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.1875 1.875H20.0625V0H18.1875V1.875H5.8125V0H3.9375V1.875H2.8125C1.26169 1.875 0 3.13669 0 4.6875V21.1875C0 22.7383 1.26169 24 2.8125 24H21.1875C22.7383 24 24 22.7383 24 21.1875V4.6875C24 3.13669 22.7383 1.875 21.1875 1.875ZM22.125 21.1875C22.125 21.7044 21.7044 22.125 21.1875 22.125H2.8125C2.29556 22.125 1.875 21.7044 1.875 21.1875V8.8125H22.125V21.1875ZM22.125 6.9375H1.875V4.6875C1.875 4.17056 2.29556 3.75 2.8125 3.75H3.9375V5.625H5.8125V3.75H18.1875V5.625H20.0625V3.75H21.1875C21.7044 3.75 22.125 4.17056 22.125 4.6875V6.9375Z" fill="black"/>
+                        <path d="M5.4375 10.7812H3.5625V12.6562H5.4375V10.7812Z" fill="black"/>
+                        <path d="M9.1875 10.7812H7.3125V12.6562H9.1875V10.7812Z" fill="black"/>
+                        <path d="M12.9375 10.7812H11.0625V12.6562H12.9375V10.7812Z" fill="black"/>
+                        <path d="M16.6875 10.7812H14.8125V12.6562H16.6875V10.7812Z" fill="black"/>
+                        <path d="M20.4375 10.7812H18.5625V12.6562H20.4375V10.7812Z" fill="black"/>
+                        <path d="M5.4375 14.5312H3.5625V16.4062H5.4375V14.5312Z" fill="black"/>
+                        <path d="M9.1875 14.5312H7.3125V16.4062H9.1875V14.5312Z" fill="black"/>
+                        <path d="M12.9375 14.5312H11.0625V16.4062H12.9375V14.5312Z" fill="black"/>
+                        <path d="M16.6875 14.5312H14.8125V16.4062H16.6875V14.5312Z" fill="black"/>
+                        <path d="M5.4375 18.2812H3.5625V20.1562H5.4375V18.2812Z" fill="black"/>
+                        <path d="M9.1875 18.2812H7.3125V20.1562H9.1875V18.2812Z" fill="black"/>
+                        <path d="M12.9375 18.2812H11.0625V20.1562H12.9375V18.2812Z" fill="black"/>
+                        <path d="M16.6875 18.2812H14.8125V20.1562H16.6875V18.2812Z" fill="black"/>
+                        <path d="M20.4375 14.5312H18.5625V16.4062H20.4375V14.5312Z" fill="black"/>
+                    </svg>                        
+                    <div class="start-date txt"><%= course.start %></div>
+                </div>
+            </span>
+
+
+            <span class="course-end">
+                <div class="course-info-txt">End of the course: </div>
+                <div class="start date-cont">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.1875 1.875H20.0625V0H18.1875V1.875H5.8125V0H3.9375V1.875H2.8125C1.26169 1.875 0 3.13669 0 4.6875V21.1875C0 22.7383 1.26169 24 2.8125 24H21.1875C22.7383 24 24 22.7383 24 21.1875V4.6875C24 3.13669 22.7383 1.875 21.1875 1.875ZM22.125 21.1875C22.125 21.7044 21.7044 22.125 21.1875 22.125H2.8125C2.29556 22.125 1.875 21.7044 1.875 21.1875V8.8125H22.125V21.1875ZM22.125 6.9375H1.875V4.6875C1.875 4.17056 2.29556 3.75 2.8125 3.75H3.9375V5.625H5.8125V3.75H18.1875V5.625H20.0625V3.75H21.1875C21.7044 3.75 22.125 4.17056 22.125 4.6875V6.9375Z" fill="black"/>
+                        <path d="M5.4375 10.7812H3.5625V12.6562H5.4375V10.7812Z" fill="black"/>
+                        <path d="M9.1875 10.7812H7.3125V12.6562H9.1875V10.7812Z" fill="black"/>
+                        <path d="M12.9375 10.7812H11.0625V12.6562H12.9375V10.7812Z" fill="black"/>
+                        <path d="M16.6875 10.7812H14.8125V12.6562H16.6875V10.7812Z" fill="black"/>
+                        <path d="M20.4375 10.7812H18.5625V12.6562H20.4375V10.7812Z" fill="black"/>
+                        <path d="M5.4375 14.5312H3.5625V16.4062H5.4375V14.5312Z" fill="black"/>
+                        <path d="M9.1875 14.5312H7.3125V16.4062H9.1875V14.5312Z" fill="black"/>
+                        <path d="M12.9375 14.5312H11.0625V16.4062H12.9375V14.5312Z" fill="black"/>
+                        <path d="M16.6875 14.5312H14.8125V16.4062H16.6875V14.5312Z" fill="black"/>
+                        <path d="M5.4375 18.2812H3.5625V20.1562H5.4375V18.2812Z" fill="black"/>
+                        <path d="M9.1875 18.2812H7.3125V20.1562H9.1875V18.2812Z" fill="black"/>
+                        <path d="M12.9375 18.2812H11.0625V20.1562H12.9375V18.2812Z" fill="black"/>
+                        <path d="M16.6875 18.2812H14.8125V20.1562H16.6875V18.2812Z" fill="black"/>
+                        <path d="M20.4375 14.5312H18.5625V16.4062H20.4375V14.5312Z" fill="black"/>
+                    </svg>                        
+                    <div class="start-date txt"><%= course.end %></div>
+                </div>
+            </span>
+
+
+
+            <h3 class="author-h">Author</h3>
+
+            <div class="author-cont">
+
+                <div class="author-img">
+                    <img src="userImgs/<%= course.authorInfo.img %>" alt="">
+                </div>
+                <div class="author-name"><%= `${course.authorInfo.firstname} ${course.authorInfo.lastname}` %></div>
+                
+            </div>
+
+        </div>
+
+
+        <!-- Right -->
+        <div class="r">
+
+            <div class="course-info-cont">
+
+                <div class="course-img-cont">
+                    <img src="/courseImgs/<%= course.img %>" alt="">
+                </div>
+
+                <div class="course-info-content">
+                    
+                    <h3 class="course-title"><%= course.title %></h3>
+
+                    <div class="course-stats">
+
+                        <div class="meetings-cont cont">
+                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.9579 14.9473H21.7925C22.0132 15.5516 22.1338 16.2037 22.1338 16.8834V25.0674C22.1338 25.3508 22.0845 25.6228 21.9947 25.8758H25.5746C26.9119 25.8758 27.9998 24.7879 27.9998 23.4506V18.9892C27.9998 16.7605 26.1866 14.9473 23.9579 14.9473Z" fill="black"/>
+                                <path d="M5.86607 16.8834C5.86607 16.2037 5.98665 15.5516 6.20737 14.9473H4.04196C1.81322 14.9473 0 16.7605 0 18.9892V23.4507C0 24.7879 1.0879 25.8759 2.42518 25.8759H6.00514C5.91539 25.6228 5.86607 25.3508 5.86607 25.0674V16.8834V16.8834Z" fill="black"/>
+                                <path d="M16.4753 12.8416H11.5249C9.29613 12.8416 7.48291 14.6548 7.48291 16.8835V25.0675C7.48291 25.5139 7.84483 25.8759 8.2913 25.8759H19.7089C20.1553 25.8759 20.5172 25.514 20.5172 25.0675V16.8835C20.5172 14.6548 18.704 12.8416 16.4753 12.8416Z" fill="black"/>
+                                <path d="M14.0006 2.12402C11.3203 2.12402 9.13965 4.30464 9.13965 6.98504C9.13965 8.80313 10.1431 10.391 11.625 11.2246C12.3279 11.62 13.1383 11.846 14.0006 11.846C14.8629 11.846 15.6733 11.62 16.3762 11.2246C17.8582 10.391 18.8616 8.80307 18.8616 6.98504C18.8616 4.30469 16.681 2.12402 14.0006 2.12402Z" fill="black"/>
+                                <path d="M5.46446 6.65503C3.45989 6.65503 1.8291 8.28581 1.8291 10.2904C1.8291 12.295 3.45989 13.9257 5.46446 13.9257C5.97295 13.9257 6.45715 13.8204 6.897 13.6311C7.65749 13.3037 8.28454 12.7241 8.67254 11.9981C8.94489 11.4886 9.09982 10.9073 9.09982 10.2904C9.09982 8.28587 7.46903 6.65503 5.46446 6.65503Z" fill="black"/>
+                                <path d="M22.5358 6.65503C20.5312 6.65503 18.9004 8.28581 18.9004 10.2904C18.9004 10.9074 19.0553 11.4886 19.3277 11.9981C19.7157 12.7242 20.3427 13.3037 21.1032 13.6311C21.5431 13.8204 22.0273 13.9257 22.5358 13.9257C24.5403 13.9257 26.1711 12.295 26.1711 10.2904C26.1711 8.28581 24.5403 6.65503 22.5358 6.65503Z" fill="black"/>
+                            </svg>
+                            <div class="achievment-cont txt"><span class="course-meetings"><%= course.meetings.length %></span> <%= (course.meetings.length == 1) ? `meeting` : `meetings` %></div>
+                        </div>
+
+                        <div class="rating-cont cont">
+                            <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_42:277)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 32.7371L28.4917 38.4954C30.1384 39.5507 32.1534 37.9907 31.72 36.0177L29.3367 25.1895L37.2884 17.8942C38.74 16.5636 37.96 14.0401 36.0534 13.8795L25.5884 12.9389L21.4934 2.70715C20.7567 0.848918 18.2434 0.848918 17.5067 2.70715L13.4117 12.916L2.9467 13.8566C1.04004 14.0172 0.260035 16.5407 1.7117 17.8713L9.66337 25.1666L7.28004 35.9948C6.8467 37.9677 8.8617 39.5277 10.5084 38.4724L19.5 32.7371Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_42:277">
+                                <rect width="39" height="39" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="achievment-cont txt"><span class="course-rating"><%= course.rating %></span>/5</div>
+                        </div>
+
+                        <div class="rating-cont cont">
+                            <svg width="38" height="48" viewBox="0 0 38 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_42:390)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.24003V41.76C0 44.4686 3.00545 46.1143 5.32 44.64L33.44 26.88C35.5818 25.5429 35.5818 22.4572 33.44 21.0857L5.32 3.36003C3.00545 1.88574 0 3.53146 0 6.24003Z" fill="black"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_42:390">
+                                <rect width="38" height="48" fill="white"/>
+                                </clipPath>
+                                </defs>
+                            </svg>
+                            <%
+                                let hours = 0;
+                                
+                                course.meetings.forEach(met =>{
+                                    hours += parseInt(met.mestm)
+                                })
+                                console.log("------ hourse ------", hours)
+                            %> 
+                            <div class="achievment-cont txt"><span class="course-hours"><%= hours %></span>h of material</div>
+                        </div>
+
+                        
+                        <div class="price-cont">
+                            <span class="price"><%= course.price %></span>$
+                        </div>
+
+                    </div>
+
+                    <a href="/purchase-course?id=<%= course._id %>" class="purchase-btn">Purchase</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

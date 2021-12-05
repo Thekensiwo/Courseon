@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="newest.css">
+    <script src="/scripts/navScript.js" defer></script>
+</head>
+<body>
+
+    <%- include('header') %>
+
+
+
+    <main>
+
+        <h1>Newest courses</h1>
+
+        <% if(courses.length == 0){%>
+            <p>There are currently no avaiable courses.</p>
+        <% } %>
+        <!-- Courses -->
+        <div class="courses-cont">
+
+            <% courses.forEach(course =>{ %>
+                <div class="course-cont">
+                    
+                    <a href="/courseInfo?id=<%= course._id.toString() %>" class="img-cont">
+                        <img src="/courseImgs/<%= course.img %>" alt="">                
+                    </a>
+    
+                    <div class="info">
+    
+                        <a href="/courseInfo?id=<%= course._id.toString() %>" class="title"><%= course.title %></a>
+    
+                        <div class="price-ranking">
+                            <h5 class="price"><%= course.price %>$</h5>
+                            <div class="rating">
+                                <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_9:1937)">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.50012 15.1094L13.8807 17.7671C14.6829 18.2541 15.6646 17.5341 15.4535 16.6235L14.2923 11.6259L18.1662 8.25883C18.8734 7.64472 18.4935 6.48001 17.5646 6.40589L12.4662 5.97177L10.4712 1.24942C10.1123 0.391774 8.8879 0.391774 8.52901 1.24942L6.53401 5.96119L1.43567 6.3953C0.506784 6.46942 0.126784 7.63413 0.834006 8.24824L4.7079 11.6153L3.54678 16.6129C3.33567 17.5235 4.31734 18.2435 5.11956 17.7565L9.50012 15.1094Z" fill="#585858"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_9:1937">
+                                    <rect width="19" height="18" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                </svg>
+                                <span><%= course.rating %>/5</span>
+                            </div>
+                        </div>
+    
+                        <div class="author-cont">
+                            <h6 class="author"><%= `${course.authorInfo.firstname} ${course.authorInfo.lastname}` %></h6>
+                            <div class="author-img">
+                                <img src="/userImgs/<%= course.authorInfo.img %>" title="<%= course.authorInfo.firstname + ' ' + course.authorInfo.lastname %>"alt="">
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+    
+                <% }) %>
+
+        </div>
+
+        <!-- -- -->
+
+    </main>
+
+</body>
+</html>

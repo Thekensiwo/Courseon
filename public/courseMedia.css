@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+  --wd: 98%;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family: "Nunito";
+  overflow-x: hidden;
+  background: #18191A;
+}
+
+.green {
+  color: #008C8C;
+}
+
+@media (min-width: 450px) {
+  :root {
+    --wd: 95%;
+  }
+}
+
+@media (min-width: 650px) {
+  :root {
+    --wd: 92%;
+  }
+  main {
+    -ms-grid-rows: 1.2fr .07fr 1.8fr .05fr .2fr;
+        grid-template-rows: 1.2fr .07fr 1.8fr .05fr .2fr;
+    height: 1000px;
+  }
+  .bottom .meetings-list {
+    width: 350px;
+  }
+  .bottom .info-cont .course-start, .bottom .info-cont .course-end, .bottom .info-cont .est-meetings-time {
+    margin-left: auto;
+    margin-right: auto;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt, .bottom .info-cont .est-meetings-time .course-info-txt {
+    white-space: nowrap;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
+}
+
+@media (min-width: 850px) {
+  :root {
+    --wd: 85%;
+  }
+  main {
+    -ms-grid-rows: 1.5fr .07fr 1.8fr .05fr .2fr;
+        grid-template-rows: 1.5fr .07fr 1.8fr .05fr .2fr;
+    height: 1200px;
+  }
+  .bottom .meetings-list {
+    width: 400px;
+  }
+}
+
+@media (min-width: 1050px) {
+  :root {
+    --wd: 97%;
+  }
+  /* --- Main --- */
+  main {
+    -ms-grid-rows: 2fr .05fr .22fr;
+        grid-template-rows: 2fr .05fr .22fr;
+    -ms-grid-columns: 5fr .2fr 2.1fr;
+        grid-template-columns: 5fr .2fr 2.1fr;
+        grid-template-areas: "vid . chat" "vid . ." "vid . users";
+    height: 550px;
+  }
+  main .video-container {
+    width: 100%;
+  }
+  main .chat-container .chat-upper {
+    -webkit-box-flex: .9;
+        -ms-flex: .9;
+            flex: .9;
+  }
+  main .chat-container .chat-upper h3 {
+    font-size: 2rem;
+  }
+  main .chat-container .chat-main {
+    -webkit-box-flex: 8;
+        -ms-flex: 8;
+            flex: 8;
+  }
+  main .chat-container .chat-bottom {
+    -webkit-box-flex: 1.1;
+        -ms-flex: 1.1;
+            flex: 1.1;
+  }
+  main .chat-container .chat-bottom .inp-cont {
+    width: 95%;
+    height: 80%;
+  }
+  main .chat-container .chat-bottom .inp-cont .inp {
+    border-radius: 4px;
+    padding-left: .8rem;
+    font-size: 1.7rem;
+  }
+  main .chat-container .chat-bottom .inp-cont svg {
+    right: 6%;
+    width: 25px;
+    height: 25px;
+  }
+  /* --- Bottom --- */
+  .bottom {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    -ms-grid-columns: 5fr .2fr 2.1fr;
+        grid-template-columns: 5fr .2fr 2.1fr;
+        grid-template-areas: "info . list";
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    /* --- Meetings list --- */
+    /* --- Info cont --- */
+  }
+  .bottom .meetings-list {
+    /*             order: 2;
+            flex: .8; */
+    margin: 0;
+    width: 100%;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    /* margin-right: 1%; */
+  }
+  .bottom .info-cont {
+    margin-top: 0rem;
+    /* margin-right: 4rem; */
+    margin: 0;
+    width: 100%;
+    /* margin-left: 1%; */
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    /* --- Course info --- */
+    /*             margin-left: auto;
+            margin-right: auto;
+            width: max-content;
+
+            .course-info-txt{
+                white-space: nowrap;
+                width: max-content;
+            } */
+    /* --- About mentor --- */
+  }
+  .bottom .info-cont h3 {
+    text-align: left;
+    font-size: 3.3rem;
+    padding: 2.5rem 0rem;
+    margin-left: 2rem;
+  }
+  .bottom .info-cont .meeting-info {
+    text-align: left;
+    padding: 0;
+    margin-left: 2rem;
+    word-break: break-word;
+    width: 65ch;
+    font-size: 1.7rem;
+  }
+  .bottom .info-cont span {
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .bottom .info-cont .est-meeting-cont {
+    margin-top: 4rem;
+    margin-left: 2rem;
+  }
+  .bottom .info-cont .est-meeting {
+    background: #191B1D;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    margin-left: 1.5rem;
+  }
+  .bottom .info-cont h4 {
+    text-align: left;
+    font-size: 2rem;
+    margin-left: 2rem;
+    margin-top: 5rem;
+    font-weight: 600;
+  }
+  .bottom .info-cont .meeting-materials {
+    width: 70%;
+    min-height: 100px;
+    margin-left: 2rem;
+    margin-top: .5rem;
+  }
+  .bottom .info-cont .about-course {
+    margin-top: 4rem;
+    padding-bottom: 1rem;
+  }
+  .bottom .info-cont .course-info {
+    width: 80%;
+    margin-left: 2rem;
+    padding-left: 0;
+    text-align: left;
+  }
+  .bottom .info-cont .course-start {
+    margin-top: 8rem;
+  }
+  .bottom .info-cont .course-start, .bottom .info-cont .course-end, .bottom .info-cont .est-meetings-time {
+    margin-left: 2rem;
+    width: 100%;
+  }
+  .bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt, .bottom .info-cont .est-meetings-time .course-info-txt {
+    width: 25%;
+  }
+  .bottom .info-cont .course-start span, .bottom .info-cont .course-end span, .bottom .info-cont .est-meetings-time span {
+    margin-left: 0;
+    margin-top: 0rem;
+  }
+  .bottom .info-cont .start, .bottom .info-cont .end {
+    padding: .7rem 1.2rem;
+    font-size: 1.7rem;
+    border-radius: 4px;
+  }
+  .bottom .info-cont .start svg, .bottom .info-cont .end svg {
+    width: 24px;
+    height: 24px;
+  }
+  .bottom .info-cont .start .txt, .bottom .info-cont .end .txt {
+    padding-left: 1rem;
+  }
+  .bottom .info-cont .est-meetings-total {
+    background: #191B1D;
+    padding: .4rem 1rem;
+    font-size: 2.2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 0;
+    border-radius: 4px;
+  }
+  .bottom .info-cont .h4-course-materials {
+    margin-top: 7rem;
+  }
+  .bottom .info-cont .course-materials {
+    width: 90%;
+    min-height: 100px;
+    margin-left: 2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: .5rem;
+  }
+  .bottom .info-cont .about-mentor {
+    margin-top: 4rem;
+  }
+  .bottom .info-cont .mentor-personals {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1rem;
+  }
+  .bottom .info-cont .mentor-personals .mentor-img-cont {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #191B1D;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+  .bottom .info-cont .mentor-personals .mentor-name {
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    text-align: left;
+    margin-right: auto;
+    font-size: 2.7rem;
+    margin-top: 0rem;
+    margin-left: 1.5rem;
+  }
+  .bottom .info-cont .mentor-desc {
+    text-align: left;
+    width: 70ch;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-left: 2rem;
+    margin-top: 2rem;
+  }
+  .bottom .info-cont .mentor-info {
+    margin-left: 2rem;
+    margin-top: 3rem;
+  }
+  .bottom .info-cont .mentor-info > * {
+    margin-top: 2rem;
+  }
+  .bottom .info-cont .mentor-info > * svg {
+    width: 28px;
+    height: 28px;
+  }
+  .bottom .info-cont .mentor-info > * .info-txt {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1350px) {
+  main {
+    -ms-grid-rows: 2fr .05fr .24fr;
+        grid-template-rows: 2fr .05fr .24fr;
+    -ms-grid-columns: 5fr .2fr 2.1fr;
+        grid-template-columns: 5fr .2fr 2.1fr;
+    height: 620px;
+  }
+  main .chat-users .chat-user {
+    width: 40px;
+    height: 40px;
+  }
+  .bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt {
+    width: 20%;
+  }
+}
+
+@media (min-width: 1600px) {
+  main {
+    -ms-grid-columns: 5.4fr .1fr 2.2fr;
+        grid-template-columns: 5.4fr .1fr 2.2fr;
+    height: 660px;
+  }
+  main .chat-container .chat-bottom {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  main .chat-container .chat-bottom .inp-cont svg {
+    width: 28px;
+    height: 28px;
+    right: 4%;
+  }
+  main .chat-users .chat-user {
+    width: 45px;
+    height: 45px;
+    margin-left: 1.3rem;
+  }
+  main .chat-users .chat-user svg {
+    width: 27px;
+    height: 27px;
+  }
+  .bottom {
+    -ms-grid-columns: 5.4fr .1fr 2.2fr;
+        grid-template-columns: 5.4fr .1fr 2.2fr;
+  }
+  .bottom .meetings-list .meeting .meeting-upper .date-cont {
+    padding: 1rem;
+    width: 145px;
+  }
+  .bottom .meetings-list .meeting .meeting-upper .date-cont svg {
+    width: 22px;
+    height: 22px;
+  }
+  .bottom .meetings-list .meeting .meeting-upper .date-cont .meeting-date {
+    font-size: 1.5rem;
+  }
+  .bottom .meetings-list .meeting .meeting-bottom .meeting-title {
+    font-size: 1.7rem;
+  }
+  .bottom .meetings-list .meeting .meeting-bottom h5 {
+    font-size: 1.5rem;
+  }
+  .bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt {
+    width: 15%;
+  }
+  .bottom .info-cont .course-info {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1900px) {
+  main {
+    height: 740px;
+    -ms-grid-columns: 5.4fr .2fr 2.2fr;
+        grid-template-columns: 5.4fr .2fr 2.2fr;
+  }
+  .bottom {
+    -ms-grid-columns: 5.4fr .2fr 2.2fr;
+        grid-template-columns: 5.4fr .2fr 2.2fr;
+  }
+  .bottom .info-cont .course-start .course-info-txt, .bottom .info-cont .course-end .course-info-txt {
+    width: 18%;
+  }
+}
+/*# sourceMappingURL=courseMedia.css.map */

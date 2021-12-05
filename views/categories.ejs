@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="categories.css">
+    <script src="/scripts/navScript.js" defer></script>
+</head>
+<body>
+
+    <%- include('header') %>
+
+
+
+    <main>
+
+        <h1>Categories</h1>
+
+        <!-- Categories -->
+        <div class="categories-cont">
+
+            <%
+                const colors = [
+                    '#ffb001',
+                    '#6C63FF',
+                    '#FF3152',
+                    '#1EA5FC',
+                    '#05CE91',
+                    '#008C8C',
+                    '#1877f2'
+                ] 
+            %>
+
+            <% cats.forEach(cat =>{ %>
+
+                <%
+                    const random = Math.floor(Math.random() * colors.length)
+                %> 
+
+                <div class="category-cont">
+                
+                    <a href="/category?id=<%= cat._id %>" class="img" <%= `style=background:${colors[random]}` %>>
+                        <img src="/imgs/<%= cat.img %>" alt="img">
+                    </a>
+    
+                    <a href="/category?id=<%= cat._id %>" class="text"><%= cat.title %></a>
+                </div>
+
+                <% colors.splice(random,1) %>
+                
+            <% }) %>
+
+        </div>
+
+        <!-- -- -->
+
+    </main>
+
+</body>
+</html>
