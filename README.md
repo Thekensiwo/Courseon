@@ -1,1 +1,1 @@
-LIVE: https://www.courseonsite.herokuapp.com
+LIVE: https://courseonsite.herokuapp.com
