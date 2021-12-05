@@ -12,3 +12,9 @@ Do perfecji brakuje tej stronie wiele, lecz raczej nie będę nad nią więcej p
 Na stronie zahostowanej na heroku może czasem nie działać udostępnianie ekranu i live chat,
 gdyż z tego co zauważyłem darmowa wersja heroku czasami wyłącza certyfikat ssl,
 który jest wymagany by działalo WebRTC oraz WebSocket.
+
+
+Na zahostowanej stronie stworzonych jest 2 test userów
+
+login: TestUser1 hasło: 123
+login: TestUser2 hasło: 321
