@@ -17,4 +17,5 @@ który jest wymagany by działalo WebRTC oraz WebSocket.
 Na zahostowanej stronie stworzonych jest 2 test userów
 
 login: TestUser1 hasło: 123
+
 login: TestUser2 hasło: 321
