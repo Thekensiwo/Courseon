@@ -4,7 +4,7 @@ Na stronie można stworzyć swój kurs internetowy odbywający się w formie spo
 
 Strona została stworzona w tydzień na konkurs HackHeroes 2021.
 
-Do perfecji brakuje tej stronie wiele, lecz raczej nie będę nad nią więcej pracował.
+Stronie brakuje jeszcze sporo funkcjonalności, lecz raczej nie będę nad nią więcej pracował.
 
 
 
