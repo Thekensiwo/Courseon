@@ -1,13 +1,11 @@
 LIVE: https://courseonsite.herokuapp.com
 
 Na stronie można stworzyć swój kurs internetowy odbywający się w formie spotkań na żywo.
-
 Strona została stworzona w tydzień na konkurs HackHeroes 2021.
-
-Stronie brakuje jeszcze sporo funkcjonalności, lecz raczej nie będę nad nią więcej pracował.
-
+Brakuje jej jeszcze sporo funkcjonalności, lecz raczej nie będę nad nią więcej pracował.
 
 
+# #
 
 Na stronie zahostowanej na heroku może czasem nie działać udostępnianie ekranu i live chat,
 gdyż z tego co zauważyłem darmowa wersja heroku czasami wyłącza certyfikat ssl,
